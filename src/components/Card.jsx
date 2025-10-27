@@ -14,7 +14,6 @@ const Card = ({ issue, data, setData }) => {
 
     const restData = data.filter((elem) => elem.ticketId != issue.ticketId);
 
-    // console.log({ currentData, restData });
     setData([currentData, ...restData]);
   };
 
