@@ -14,13 +14,10 @@ const IssuesManagement = ({ fetchPromise }) => {
       ? data
       : data.filter((element) => element.status == toggleStatus);
 
-  // console.log({ toggleStatus, data });
-  console.log(toggleStatus, filteredData);
   return (
     <div>
       {/* Box */}
-
-      <CountBox data={data}/>
+      <CountBox data={data} />
 
       {/* Toggle buttons */}
       <Toggles_Btns
@@ -37,7 +34,6 @@ const IssuesManagement = ({ fetchPromise }) => {
         ) : (
           <div className="grid grid-cols-3 gap-[12px] mb-6">
             {filteredData.map((issue, ind) => {
-              // console.log(issue);
               return (
                 <Card key={ind} issue={issue} data={data} setData={setData} />
               );
